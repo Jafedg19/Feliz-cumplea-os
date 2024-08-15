@@ -1,19 +1,19 @@
-// confetti.js
-document.addEventListener('DOMContentLoaded', function() {
-    var confetti = window.confetti;
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Inicializa el confeti
+    const confetti = window.confetti || (() => {});
 
-    function shootHeartConfetti() {
+    // Función para lanzar confeti con forma de corazones
+    function launchConfetti() {
         confetti({
-            particleCount: 300,
+            particleCount: 200,
             angle: 90,
-            spread: 90,
-            origin: { y: 0.5 },
-            colors: ['#ff0000', '#ff69b4', '#ff1493', '#ff4500', '#ff6347'],
+            spread: 70,
+            origin: { x: 0.5, y: 0.5 },
             shapes: ['heart'], // Forma de los confetis
-            scalar: 1.2,
-            decay: 0.8
+            colors: ['#ff69b4', '#ff1493', '#ffffff'] // Colores de los confetis
         });
     }
 
-    shootHeartConfetti();
+    // Lanza confeti al cargar la página
+    launchConfetti();
 });
