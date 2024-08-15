@@ -24,12 +24,18 @@ h1 {
     margin-top: 50px;
     font-size: 3em;
 }
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
+}
 .message-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    gap: 20px; /* Espacio entre el mensaje y las imágenes */
+    margin-bottom: 30px;
 }
 .message {
     font-size: 1.5em;
@@ -38,23 +44,22 @@ h1 {
 }
 .image-container-right {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 20px; /* Espacio entre las imágenes */
 }
 .image-container-right img {
     max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
     height: auto; /* Mantiene la proporción de las imágenes */
-    margin: 10px; /* Añade espacio alrededor de las imágenes */
     border-radius: 10px; /* Bordes redondeados para un efecto suave */
 }
 .poem-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px; /* Añade espacio entre el poema y la imagen */
     margin: 30px auto;
     max-width: 80%;
-    gap: 20px; /* Añade espacio entre el poema y la imagen */
 }
 .poem {
     flex: 1;
