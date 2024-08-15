@@ -10,27 +10,56 @@ body {
     position: relative;
     height: 100vh; /* Altura completa de la ventana */
 }
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 h1 {
     color: #ff69b4; /* Color rosa para el título */
     margin-top: 50px;
     font-size: 3em;
 }
+.message-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
 .message {
     font-size: 1.5em;
-    margin: 20px 0;
     line-height: 1.6;
-    padding: 0 10%;
+    padding: 0 20px;
+}
+.image-container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-container-right img {
+    max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin: 10px; /* Añade espacio alrededor de las imágenes */
+    border-radius: 10px; /* Bordes redondeados para un efecto suave */
+}
+.poem-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 80%;
 }
 .poem {
-    margin: 30px auto;
+    margin: 0;
     padding: 20px;
-    max-width: 80%;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
     border-radius: 10px; /* Bordes redondeados */
 }
 .poem h2 {
     font-size: 2em;
-    color: #ff1493; /* Color rosa fuerte para el encabezado del poema */
+    color: #ff1493; /* Color rosa fuerte para el título del poema */
     margin-bottom: 10px;
 }
 .poem p {
@@ -38,16 +67,12 @@ h1 {
     line-height: 1.6;
     margin: 10px 0;
 }
-.image-container {
-    display: flex;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples filas */
+.poem-image {
+    margin-left: 20px;
 }
-.image-container img {
-    max-width: 80%; /* Ajusta el tamaño máximo de las imágenes */
-    max-height: 500px; /* Limita la altura máxima de las imágenes */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 10px; /* Añade espacio alrededor de las imágenes */
+.poem-image img {
+    max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
     border-radius: 10px; /* Bordes redondeados para un efecto suave */
 }
 .twinkling {
