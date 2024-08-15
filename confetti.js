@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     function createConfetti() {
-        const duration = 5 * 1000; // Duración en milisegundos
+        const duration = 5 * 1000; 
         const end = Date.now() + duration;
         const colors = ['#ff0a82', '#ff6f6f', '#ff9a00', '#ffdd00']; 
 
