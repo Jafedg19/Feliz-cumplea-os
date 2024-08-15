@@ -3,15 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños, Amor!</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mi Página de Cumpleaños</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Feliz Cumpleaños, Mi Amor!</h1>
-    <img src="foto.jpg" alt="Foto de nosotros" class="foto">
-    <p>Hoy celebramos tu vida y todo lo que significas para mí.</p>
-    <p>Te amo más de lo que las palabras pueden expresar.</p>
-    <canvas id="confetti"></canvas>
-    <script src="confetti.js"></script>
+    <h1>¡Feliz Cumpleaños!</h1>
+    <p class="message">Querida [Nombre],</p>
+    <p class="message">¡Espero que tengas un día maravilloso lleno de alegría y amor!</p>
+    
+    <!-- Insertar imágenes -->
+    <img src="fotoimages/foto1.jpg" alt="Foto de cumpleaños 1">
+    <img src="fotoimages/foto2.jpg" alt="Foto de cumpleaños 2">
+    <img src="fotoimages/foto3.jpg" alt="Foto de cumpleaños 3">
+    
+    <!-- Contenedor para el efecto de confeti -->
+    <div class="confetti" id="confetti"></div>
+
+    <script>
+        // Efecto de confeti
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+            function randomColor() {
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            function randomPosition() {
+                return Math.random() * 100 + 'vw';
+            }
+
+            function randomSize() {
+                return Math.random() * 10 + 5 + 'px';
+            }
+
+            function createPiece() {
+                const piece = document.createElement('div');
+                piece.style.position = 'absolute';
+                piece.style.width = randomSize();
+                piece.style.height = randomSize();
+                piece.style.backgroundColor = randomColor();
+                piece.style.borderRadius = '50%';
+                piece.style.top = '0';
+                piece.style.left = randomPosition();
+                piece.style.opacity = '0.8';
+                piece.style.pointerEvents = 'none';
+                piece.style.animation = 'fall 3s ease-in forwards';
+                confettiContainer.appendChild(piece);
+            }
+
+            for (let i = 0; i < 100; i++) {
+                createPiece();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', createConfetti);
+    </script>
+
+    <style>
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh) rotate(0deg);
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
 </body>
 </html>
