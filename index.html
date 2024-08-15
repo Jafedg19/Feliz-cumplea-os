@@ -4,95 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página de Cumpleaños</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background: #f0f8ff; /* Fondo azul claro */
-            color: #333;
-            overflow: hidden;
-            position: relative;
-            height: 100vh; /* Altura completa de la ventana */
-        }
-        h1 {
-            color: #ff69b4; /* Color rosa para el título */
-            margin-top: 50px;
-            font-size: 3em;
-        }
-        p.message {
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-        img {
-            max-width: 80%; /* Ajusta el tamaño máximo de las imágenes */
-            height: auto;
-            margin: 10px 0;
-            border-radius: 10px; /* Bordes redondeados para un efecto suave */
-        }
-        .twinkling {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            background: url('https://www.transparenttextures.com/patterns/panama.png'); /* Textura de fondo */
-            background-size: cover;
-        }
-        .twinkling span {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.8); /* Brillitos blancos */
-            border-radius: 50%;
-            animation: twinkling 1.5s infinite;
-        }
-        @keyframes twinkling {
-            0% {
-                transform: translateY(-10px);
-                opacity: 0.7;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(10px);
-                opacity: 0.7;
-            }
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.3/dist/confetti.browser.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var confetti = window.confetti;
-
-            function shootConfetti() {
-                confetti({
-                    particleCount: 200,
-                    angle: 90,
-                    spread: 90,
-                    origin: { y: 0.6 },
-                    colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'],
-                    decay: 0.9
-                });
-            }
-
-            shootConfetti();
-        });
-    </script>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
 </head>
 <body>
-    <h1>¡Feliz Cumpleaños!</h1>
-    <p class="message">Querida [Nombre],</p>
-    <p class="message">¡Espero que tengas un día maravilloso lleno de alegría y amor!</p>
+    <h1>FELIZ CUMPLEAÑOS LINDURA <3</h1>
+    <p class="message">
+        Esto es para la cumpleañera más linda del mundo, exacto, eres tú Sara.<br>
+        Espero que la pases bien hoy. Sé que las cosas no están saliendo como quieres últimamente,<br>
+        pero esto que hice es solo un simple detalle para ti para demostrarte que me importas.<br>
+        Perdóname por no poder estar a tu lado, pero te amo muchooooooooooooooooo linda, pásala bien hoy.
+    </p>
     
-    <!-- Insertar imágenes -->
-    <img src="fotosimages/foto1.jpg" alt="Foto de cumpleaños 1">
-    <img src="fotosimages/foto2.jpg" alt="Foto de cumpleaños 2">
-    <img src="fotosimages/foto3.jpg" alt="Foto de cumpleaños 3">
+    <!-- Poema de amor -->
+    <div class="poem">
+        <h2>Un Poema Para Ti</h2>
+        <p>
+            En este día tan especial, te quiero decir,<br>
+            Que eres mi todo, mi alegría sin fin.<br>
+            Como los perros que saltan al jugar,<br>
+            O los gatos que nos hacen reír sin parar.
+        </p>
+        <p>
+            Contigo descubri el mundo del K-pop, brillante y alegre como tu corazon,<br>
+            Y compartimos videos de TikTok que nunca llegan a ser tediosos por tu amor.<br>
+            Tu risa es mi música, mi canción sin fin,<br>
+            Y cada día contigo es un sueño sin fin.
+        </p>
+        <p>
+            En cada momento, en cada rincón,<br>
+            Eres el ritmo de mi corazón.<br>
+            Gracias por ser mi amor, mi mejor amiga,<br>
+            Hoy y siempre, eres mi vida y mi risa.
+        </p>
+    </div>
+
+    <!-- Contenedor para las imágenes -->
+    <div class="image-container">
+        <img src="fotosimages/foto1.jpg" alt="Foto de cumpleaños 1">
+        <img src="fotosimages/foto2.jpg" alt="Foto de cumpleaños 2">
+        <img src="fotosimages/foto3.jpg" alt="Foto de cumpleaños 3">
+    </div>
     
     <!-- Contenedor para los brillitos -->
     <div class="twinkling">
@@ -106,5 +57,9 @@
         <span style="top: 70%; left: 75%;"></span>
         <span style="top: 80%; left: 85%;"></span>
     </div>
+
+    <!-- Incluye el archivo de confeti -->
+    <script src="confetti.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.3/dist/confetti.browser.min.js"></script>
 </body>
 </html>
