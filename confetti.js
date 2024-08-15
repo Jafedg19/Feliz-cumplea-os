@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     function createConfetti() {
-        
-        const duration = 5 * 1000; 
+        const duration = 5 * 1000; // Duración en milisegundos
         const end = Date.now() + duration;
         const colors = ['#ff0a82', '#ff6f6f', '#ff9a00', '#ffdd00']; 
 
         (function frame() {
-         
             confetti({
                 particleCount: 100,
                 angle: 90,
@@ -23,9 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     createConfetti();
-});
-    }
-
-    
-    setInterval(createConfetti, 50);
 });
