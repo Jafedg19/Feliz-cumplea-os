@@ -14,6 +14,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px; /* Ajusta según sea necesario */
+    box-sizing: border-box;
 }
 h1 {
     color: #ff69b4; /* Color rosa para el título */
@@ -50,8 +54,10 @@ h1 {
     flex-wrap: wrap;
     margin: 30px auto;
     max-width: 80%;
+    gap: 20px; /* Añade espacio entre el poema y la imagen */
 }
 .poem {
+    flex: 1;
     margin: 0;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
@@ -68,7 +74,7 @@ h1 {
     margin: 10px 0;
 }
 .poem-image {
-    margin-left: 20px;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
 }
 .poem-image img {
     max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
