@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             angle: 90,
             spread: 70,
             origin: { x: 0.5, y: 0.5 },
-            shapes: ['heart'], // Forma de los confetis
+            shapes: ['heart'], 
             colors: ['#ff69b4', '#ff1493', '#ffffff'] 
         });
     }
