@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         confetti.style.opacity = '0.8';
         container.appendChild(confetti);
 
-       
+        
         setTimeout(() => {
             confetti.style.transition = 'transform 2s, opacity 2s';
             confetti.style.transform = `translateY(100vh) rotate(${Math.random() * 360}deg)`;
@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
 
-    // Crear el confeti en intervalos
+    
+    setInterval(createConfetti, 50);
+});
+    }
+
+    
     setInterval(createConfetti, 50);
 });
